@@ -1,16 +1,26 @@
 import csv
-def process_data():
+import os
+
+print("Python is running")
+print("Current folder:")
+print(os.getcwd())
+
+print("\nFiles in this folder:")
+print(os.listdir())
+print("Program started")
+
+try:
     with open("data.csv", "r") as file:
         reader = csv.DictReader(file)
 
-        print("\n EMPLOYEE DETAILS")
+        print("CSV opened successfully")
+        print("Headers:", reader.fieldnames)
 
         for row in reader:
-            print("name: ", row["name"])
-            print("roll no: ", row["roll_no"])
-            print("department: ", row["department"])
-            print("timing of job: ", row["timing_of_job"])
+            print("Name:", row["Name"])
+            print("Roll No:", row["Roll_No"])
+            print("Department:", row["Department"])
+            print("Timing:", row["Timing"])
 
-
-process_data()
-        
+except Exception as e:
+    print("ERROR:", e)
