@@ -359,3 +359,88 @@ This project strengthened my understanding of **Python functions, mathematical o
 ## 📸 Sample Output
 
 ![Day 14 Output](day_14_output.png)
+
+
+day - 15
+# Day 15 – Python Contact Book
+
+## 📌 Project Overview
+
+This project is a simple Contact Book application built using Python.
+
+The program allows users to add, view, search, and manage contact information using basic Python concepts.
+
+## 🎯 Objective
+
+- Practice Python functions
+- Work with dictionaries
+- Store and manage contact information
+- Reduce code redundancy
+- Implement user interaction
+
+## 🛠️ Technologies Used
+
+- Python
+- VS Code
+
+## ⚙️ Features
+
+- Add a new contact
+- View saved contacts
+- Search for a contact
+- Store contact details using a dictionary
+- Simple menu-based interaction
+
+## 🧠 Key Concepts Learned
+
+- Functions
+- Dictionaries
+- Loops
+- Conditional statements
+- User input
+- Dictionary operations
+
+## 📂 Project Structure
+
+```text
+day-15--folder/
+│
+├── contact_book.py
+├── day_15_output.png
+└── README.md
+
+# Day 16 – Scheduled Python Data Job
+
+## 📌 Project Overview
+
+This project demonstrates a simple scheduled Python data-processing job.
+
+The program reads employee information from a CSV file, processes the data, displays the employee details, creates an output report, and logs the execution.
+
+## 🎯 Objective
+
+- Learn basic job scheduling and automation
+- Process CSV data using Python
+- Add execution logging
+- Handle failed executions
+- Make the job safe for repeated execution
+
+## 🛠️ Technologies Used
+
+- Python
+- CSV
+- Schedule
+- Logging
+- VS Code
+
+## 📂 Project Structure
+
+```text
+day-16--folder/
+│
+├── data.csv
+├── schedule_job.py
+├── job.log
+├── output_report.csv
+├── day_16_output.png
+└── README.md
