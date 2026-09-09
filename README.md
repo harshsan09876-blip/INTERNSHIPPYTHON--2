@@ -444,3 +444,194 @@ day-16--folder/
 ├── output_report.csv
 ├── day_16_output.png
 └── README.md
+
+
+# Day 17 - Email Report Automation System
+
+## 📌 Project Overview
+
+This project is part of the **Veda Technology Python Internship**.
+
+The objective of this task is to generate a business report using Python and Pandas, save the report as an Excel file, and automate its delivery through email using SMTP.
+
+The project also includes logging and error handling.
+
+---
+
+## 🎯 Objectives
+
+* Generate a business report using Python.
+* Use Pandas for data handling.
+* Export the report to Excel.
+* Learn the basics of SMTP email integration.
+* Use environment variables for email credentials.
+* Implement logging.
+* Handle errors using `try-except`.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Pandas
+* OpenPyXL
+* SMTP
+* Excel
+* Logging
+
+---
+
+## 📂 Project Structure
+
+```text
+Day_17_Email_Report_Automation/
+│
+├── email_report_automation.py
+├── business_report.xlsx
+├── email_automation.log
+├── README.md
+└── day-17-output.png
+```
+
+### File Description
+
+| File                         | Purpose                          |
+| ---------------------------- | -------------------------------- |
+| `email_report_automation.py` | Main Python automation program   |
+| `business_report.xlsx`       | Generated business report        |
+| `email_automation.log`       | Stores program events and errors |
+| `README.md`                  | Project documentation            |
+| `day-17-output.png`          | Sample output screenshot         |
+
+---
+
+## 📊 Business Report
+
+The program creates sample business data containing:
+
+* Product
+* Sales
+* Revenue
+
+The data is converted into a Pandas DataFrame and exported as:
+
+```text
+business_report.xlsx
+```
+
+The Excel report was successfully generated and opened for verification.
+
+---
+
+## 📧 Email Automation
+
+The project uses Python's built-in `smtplib` library to connect to an SMTP server and send the generated Excel report as an attachment.
+
+The program is designed to read email credentials through environment variables instead of storing credentials directly inside the Python code.
+
+Example environment variables:
+
+```text
+EMAIL_ADDRESS
+EMAIL_PASSWORD
+RECIPIENT_EMAIL
+```
+
+No email credentials are hardcoded in the Python source code.
+
+---
+
+## 📝 Logging
+
+Logging is used to record important events during program execution.
+
+For example:
+
+```text
+Business report generated successfully.
+Email sent successfully.
+```
+
+Errors are also recorded in:
+
+```text
+email_automation.log
+```
+
+---
+
+## ⚠️ Current Testing Status
+
+### Successfully Completed
+
+* Python program executed successfully.
+* Business data generated successfully.
+* Pandas DataFrame created successfully.
+* Excel report generated successfully.
+* `business_report.xlsx` opened successfully.
+* Logging and error handling added.
+* `openpyxl` dependency resolved.
+* `smtplib` availability confirmed.
+
+### Pending
+
+SMTP email delivery could not be completed because the SMTP server rejected the supplied authentication credentials.
+
+The error occurred during SMTP authentication, not during Excel report generation.
+
+Therefore, the report-generation portion of the automation is working, while the email-delivery portion requires further SMTP authentication setup.
+
+---
+
+## 🔐 Security
+
+Email credentials should never be hardcoded in the Python source code.
+
+Environment variables are used to keep credentials separate from the program.
+
+Sensitive credentials should not be uploaded to GitHub or included in screenshots.
+
+---
+
+## 🎤 Interview Questions
+
+### 1. How does SMTP work?
+
+SMTP (Simple Mail Transfer Protocol) is a protocol used to send emails. A Python program can connect to an SMTP server, authenticate, and send an email to the recipient.
+
+### 2. How should email credentials be stored?
+
+Email credentials should not be hardcoded in the source code. They should be stored securely using environment variables or a secrets manager.
+
+### 3. How would you handle email delivery failure?
+
+I would use `try-except` to catch the error, record it using logging, and handle the failure without allowing the entire program to crash.
+
+---
+
+## 💡 Key Learning
+
+This project helped me understand:
+
+* Pandas DataFrame creation
+* Excel report generation
+* Python file handling
+* SMTP concepts
+* Environment variables
+* Logging
+* Exception handling
+* Basic email automation
+
+---
+
+## ✅ Conclusion
+
+The business report generation component of the project was successfully completed and verified through the generated Excel file.
+
+SMTP integration was implemented in the Python program, but email delivery is currently pending due to SMTP authentication. This provided practical experience in debugging dependencies, authentication issues, and automation workflows.
+ 
+
+![alt text](day-17--folder/business_excel.xlsx.png)
+
+
+
