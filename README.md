@@ -633,5 +633,228 @@ SMTP integration was implemented in the Python program, but email delivery is cu
 
 ![alt text](day-17--folder/business_excel.xlsx.png)
 
+# Day 18 — Log Monitoring and Alert System
+
+## 📌 Project Overview
+
+This project is a **Log Monitoring and Alert System** built using Python.
+
+The program is designed to monitor a continuously growing log file, detect `ERROR` patterns using Regular Expressions, count detected errors, and generate an alert when the configured error threshold is reached.
+
+This project helped me practice **file processing, Regex, logging, and automation**.
+
+---
+
+## 🎯 Objective
+
+* Monitor a continuously growing log file.
+* Detect error patterns using Regex.
+* Count detected errors.
+* Configure an error threshold.
+* Generate an alert when the threshold is reached.
+* Record monitoring events using Python's `logging` module.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Regular Expressions (`re`)
+* `logging`
+* File Handling
+* `time`
+
+---
+
+## 📁 Project Structure
+
+```text
+Day_18/
+│
+├── application.log
+├── log_monitor.py
+├── monitor.log
+└── README.md
+```
+
+### File Description
+
+* **`application.log`** — Log file containing application information and error entries.
+* **`log_monitor.py`** — Main Python script that monitors the log file.
+* **`monitor.log`** — File used by Python's logging system to record monitoring events and alerts.
+* **`README.md`** — Documentation for the project.
+
+---
+
+## ⚙️ How the Program Works
+
+1. The program defines the log file, error threshold, and checking interval.
+2. The `logging` module is configured to record events in `monitor.log`.
+3. The program opens `application.log`.
+4. `file.seek(0, 2)` moves the file pointer to the end of the existing log.
+5. The program continuously waits for newly added log entries.
+6. `readline()` reads newly available entries.
+7. Regex checks the new line for the `ERROR` pattern.
+8. When an error is detected, `error_count` increases.
+9. When the error count reaches the configured threshold, an alert is generated.
+10. The monitoring process continues until the program is stopped.
+
+---
+
+## 🔧 Configuration
+
+The monitoring settings are configurable:
+
+```python
+LOG_FILE = "application.log"
+ERROR_THRESHOLD = 3
+CHECK_INTERVAL = 2
+```
+
+### `LOG_FILE`
+
+Specifies the log file that the program monitors.
+
+### `ERROR_THRESHOLD`
+
+Defines the number of detected errors required to generate an alert.
+
+### `CHECK_INTERVAL`
+
+Defines the number of seconds the program waits before checking again when no new log entry is available.
+
+---
+
+## 🔎 Regex Pattern
+
+The program uses:
+
+```python
+re.search(r"\bERROR\b", line, re.IGNORECASE)
+```
+
+This searches the newly added log line for the word `ERROR`.
+
+The `re.IGNORECASE` option allows the program to recognize different letter cases such as `ERROR`, `Error`, and `error`.
+
+---
+
+## 📝 Logging
+
+Python's `logging` module is configured using:
+
+```python
+logging.basicConfig(
+    filename="monitor.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+```
+
+This allows monitoring information and alerts to be recorded in `monitor.log`.
+
+---
+
+## 🚨 Alert Mechanism
+
+The program checks whether the number of detected errors has reached the configured threshold.
+
+For example:
+
+```text
+ERROR 1
+ERROR 2
+ERROR 3
+```
+
+When the threshold is `3`, the system generates an alert:
+
+```text
+ALERT! Error threshold reached: 3 errors detected.
+```
+
+The alert is displayed in the terminal and recorded using the logging system.
+
+---
+
+## 🧪 Testing
+
+The program is designed to monitor **newly added entries** rather than repeatedly processing the entire existing log file.
+
+To test the monitoring system:
+
+1. Run the program.
+2. Keep the program running.
+3. Add new `ERROR` entries to `application.log`.
+4. Allow the monitor to detect the new entries.
+5. Check the terminal for the alert.
+6. Check `monitor.log` for recorded monitoring information.
+
+---
+
+## 🧠 What I Learned
+
+Through this project, I learned:
+
+* How to monitor a continuously growing file.
+* How `seek()` can be used to position the file pointer.
+* How to use Regex for pattern matching.
+* How to count detected errors.
+* How configurable thresholds work.
+* How Python's `logging` module records events.
+* How a continuous monitoring loop works.
+* The basic concepts of log rotation and alert fatigue.
+
+---
+
+# 🎤 Interview Questions & Answers
+
+### 1. How would you monitor a continuously growing log?
+
+I would monitor a continuously growing log by opening the log file and tracking only newly added entries. I would use a configurable error threshold and check interval, and use Regex to detect error patterns. When the number of errors reaches the threshold, the system generates an alert.
+
+### 2. What is log rotation?
+
+Log rotation means managing log files when they become too large or too old. The current log can be archived or renamed and a new log file can be created so that storage does not grow indefinitely.
+
+### 3. How can alert fatigue be reduced?
+
+Alert fatigue can be reduced by avoiding repeated alerts, setting a proper error threshold, grouping similar errors, and adding a cooldown period between alerts.
+
+---
+
+## ▶️ How to Run
+
+Open the terminal inside the `Day_18` folder and run:
+
+```bash
+python log_monitor.py
+```
+
+The program will start monitoring `application.log`.
+
+Because the program continuously monitors the file, it can be stopped using:
+
+```text
+Ctrl + C
+```
+
+---
+
+## 📸 Evidence
+
+**Output evidence will be added after successful testing of the monitoring and alert mechanism.**
+
+---
+
+## ✅ Conclusion
+
+This project provided practical experience with **Python file processing, Regular Expressions, logging, and automation**.
+
+It also helped me understand how a basic monitoring system can detect error patterns in a continuously growing log and generate alerts based on a configurable threshold.
+
+**Day 18 completed as part of my Python Programming Internship at Veda Technology.** 🚀
+
+
 
 
