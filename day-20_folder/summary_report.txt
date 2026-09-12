@@ -1,0 +1,19 @@
+
+CSV DATA PROCESSING SUMMARY
+===========================
+
+Total Employees: 7
+
+SALARY STATISTICS
+-----------------
+Valid Salary Records: 7
+Invalid/Missing Salary Records: 0
+Total Salary: 1958000
+Average Salary: 279714.29
+Highest Salary: 1230000
+Lowest Salary: 49000
+
+PERFORMANCE STATISTICS
+----------------------
+Valid Performance Records: 7
+Average Performance: 87.86
