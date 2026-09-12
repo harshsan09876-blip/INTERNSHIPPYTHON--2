@@ -856,5 +856,164 @@ It also helped me understand how a basic monitoring system can detect error patt
 **Day 18 completed as part of my Python Programming Internship at Veda Technology.** 🚀
 
 
+# Read and Process a Text File
+
+## 📌 Project Overview
+
+This project is a Python program that reads a text file and generates basic statistics from its content.
+
+The program counts:
+
+* Number of lines
+* Number of words
+* Number of characters
+
+It also handles the situation where the requested file does not exist.
+
+---
+
+## 🎯 Objective
+
+The main objective of this task is to practice:
+
+* Python file handling
+* `with open()` statement
+* Reading a file line by line
+* String processing using `split()`
+* Counting using `len()`
+* Exception handling with `FileNotFoundError`
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Text File (`.txt`)
+
+---
+
+## 📂 Project Structure
+
+```text
+Read-and-Process-a-Text-File/
+│
+├── text_statistics.py
+├── practice.txt
+└── README.md
+```
+
+---
+
+## 📝 Input File
+
+The `practice.txt` file contains sample text:
+
+```text
+Natsu Dragneel is the main character of the anime Fairy tail
+miraculous ladybug is the wonderful show of 16-20 age group
+```
+
+---
+
+## 💻 Program Logic
+
+The program follows these steps:
+
+1. Open the text file using `with open()`.
+2. Initialize line, word, and character counters.
+3. Read the file line by line using a `for` loop.
+4. Increase the line counter for every line.
+5. Use `split()` to separate words and count them.
+6. Use `len()` to count characters.
+7. Display the generated statistics.
+8. Handle `FileNotFoundError` if the file does not exist.
+
+---
+
+## 🧩 Key Python Concepts
+
+### `with open()`
+
+The `with` statement automatically closes the file after the operation is completed.
+
+### `split()`
+
+`split()` separates a line into individual words.
+
+### `len()`
+
+`len()` is used to determine the number of items or characters.
+
+### `FileNotFoundError`
+
+This exception is handled when the requested text file cannot be found.
+
+---
+
+## 📊 Output
+
+The program generates statistics based on the contents of `practice.txt`.
+
+```text
+Number of lines: 2
+Number of words: ...
+Number of characters: ...
+```
+
+> Note: The exact character count depends on whether newline characters are included in the calculation.
+
+---
+
+## ⚠️ Error Handling
+
+If `practice.txt` does not exist, the program displays:
+
+```text
+File isn't found
+```
+
+This prevents the program from terminating unexpectedly because of a missing file.
+
+---
+
+# 🎤 Interview Questions & Answers
+
+### 1. Why should files be opened using `with`?
+
+The `with` statement automatically closes the file after the operation is completed. It makes file handling safer and prevents us from forgetting to close the file manually.
+
+### 2. What is the difference between `read()`, `readline()`, and `readlines()`?
+
+* `read()` reads the complete file content.
+* `readline()` reads one line at a time.
+* `readlines()` reads all lines and returns them as a list.
+
+### 3. Why is exception handling important when working with files?
+
+Exception handling prevents the program from crashing when problems occur, such as when a file does not exist or cannot be accessed.
+
+---
+
+## ✅ Learning Outcome
+
+Through this task, I learned how to:
+
+* Work with text files in Python
+* Process files line by line
+* Count lines, words, and characters
+* Use `with open()` for safer file handling
+* Handle missing files using exceptions
+* Apply basic text-processing techniques
+
+---
+
+## 👨‍💻 Author
+
+**Harsh Chauhan**
+
+Python Programming Intern
+Veda Technology
+
+![alt text](image.png)
 
 
