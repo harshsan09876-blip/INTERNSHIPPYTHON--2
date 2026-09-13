@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Harsh",
+        "class": "CSE",
+        "rollno": 20,
+        "subject": "COA",
+        "cgpa_status": "Pass"
+    },
+    {
+        "name": "Jatin",
+        "class": "CSE",
+        "rollno": 22,
+        "subject": "DSTL",
+        "cgpa_status": "Pass"
+    },
+    {
+        "name": "Sandeep",
+        "class": "CSE",
+        "rollno": 25,
+        "subject": "DS",
+        "cgpa_status": "Pass"
+    },
+    {
+        "name": "Munendra",
+        "class": "CSE",
+        "rollno": 29,
+        "subject": "CS",
+        "cgpa_status": "Pass"
+    },
+    {
+        "name": "Prabal",
+        "class": "CSE",
+        "rollno": null,
+        "subject": null,
+        "cgpa_status": "Pass"
+    }
+]
