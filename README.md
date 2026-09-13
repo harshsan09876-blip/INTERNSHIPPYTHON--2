@@ -1258,3 +1258,577 @@ This project helped me understand practical CSV processing using Python.
 I learned how to read structured data, process employee records, validate values, handle errors, calculate statistics, and generate a summary report.
 
 **Day 20 – CSV Data Processor Completed. 🐍🔥**
+
+
+DAY - 21 - JSON PROCESSOR. 
+# Day 21 — JSON Data Processor
+
+## 📌 Project Overview
+
+This project was completed as part of my **Python Programming Internship at Veda Technology**.
+
+The objective of this task was to learn how to work with **JSON data in Python**, including reading structured data, searching records, and displaying candidate information.
+
+---
+
+## 🎯 Objective
+
+* Understand JSON and its structure.
+* Learn how to read JSON data using Python.
+* Use the built-in `json` module.
+* Search for a particular candidate.
+* Work with lists and dictionaries.
+* Handle JSON file processing using Python.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **JSON**
+* **`json` module**
+
+---
+
+## 📂 Project Structure
+
+```text
+DAY_21/
+│
+├── data.json
+└── python.py
+```
+
+### `data.json`
+
+The JSON file stores candidate information such as:
+
+* Name
+* Class
+* Roll Number
+* Subject
+* CGPA Status
+
+### `python.py`
+
+The Python script reads the JSON file and allows the user to search for a candidate by name.
+
+---
+
+## ⚙️ How the Program Works
+
+```text
+data.json
+    ↓
+json.load()
+    ↓
+Python List of Dictionaries
+    ↓
+User enters candidate name
+    ↓
+Search candidate
+    ↓
+Display candidate information
+```
+
+The program uses `json.load()` to read the JSON file and convert the JSON data into Python objects.
+
+The search is made **case-insensitive** by using `.lower()`.
+
+---
+
+## 💻 Main Concepts Used
+
+### `json.load()`
+
+Used to read JSON data from a file.
+
+```python
+with open("data.json", "r") as file:
+    candidate = json.load(file)
+```
+
+### Searching
+
+The program compares the entered name with the candidate's name:
+
+```python
+if i["name"].lower() == search.lower():
+```
+
+### Key-Value Structure
+
+Each candidate is represented using key-value pairs:
+
+```text
+"name" → "Harsh"
+"class" → "CSE"
+"rollno" → 20
+"subject" → "COA"
+"cgpa_status" → "Pass"
+```
+
+---
+
+## 🖥️ Sample Output
+
+```text
+Enter the candidate name: Harsh
+
+Candidate Found!
+Name: Harsh
+Class: CSE
+Roll No: 20
+Subject: COA
+CGPA Status: Pass
+```
+
+If the candidate does not exist:
+
+```text
+Enter the candidate name: Rahul
+
+Candidate not found.
+```
+
+---
+
+## 🧠 What I Learned
+
+Through this task, I learned:
+
+* What JSON is.
+* Difference between JSON and a Python dictionary.
+* How to read JSON files using `json.load()`.
+* How JSON data becomes Python lists and dictionaries.
+* How to search structured data.
+* How to access dictionary values using keys.
+* Why `with open()` is useful for file handling.
+* How to perform case-insensitive searching.
+
+---
+
+## 🎤 Interview Questions & Answers
+
+### 1. What is JSON?
+
+**Answer:**
+
+> JSON stands for JavaScript Object Notation. It is a lightweight data format used to store and exchange structured data. It is commonly used for communication between frontend and backend applications.
+
+### 2. What is the difference between JSON and a Python dictionary?
+
+**Answer:**
+
+> A Python dictionary is a data structure used inside Python to store data in key-value pairs. JSON is a language-independent data format used to store and exchange structured data.
+
+### 3. How do you read JSON from a file in Python?
+
+**Answer:**
+
+> We use `json.load()` to read JSON data from a file. We open the file using `with open()` and then use `json.load(file)` to convert the JSON data into Python objects such as a list or dictionary.
+
+---
+
+## 🔑 Important Difference
+
+```text
+json.load()  → Read JSON from a file
+json.dump()  → Write JSON to a file
+```
+
+---
+
+## 👨‍💻 Internship Information
+
+**Internship:** Python Programming Internship
+**Organization:** Veda Technology
+**Task:** Day 21 — Create a JSON Data Processor
+**Language:** Python
+
+---
+
+## ✅ Conclusion
+
+The Day 21 project helped me understand how Python can process **structured JSON data**. I learned how to read JSON files, work with lists and dictionaries, search records, and display relevant information based on user input.
+# Day 21 — JSON Data Processor
+
+## 📌 Project Overview
+
+This project was completed as part of my **Python Programming Internship at Veda Technology**.
+
+The objective of this task was to learn how to work with **JSON data in Python**, including reading structured data, searching records, and displaying candidate information.
+
+---
+
+## 🎯 Objective
+
+* Understand JSON and its structure.
+* Learn how to read JSON data using Python.
+* Use the built-in `json` module.
+* Search for a particular candidate.
+* Work with lists and dictionaries.
+* Handle JSON file processing using Python.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **JSON**
+* **`json` module**
+
+---
+
+## 📂 Project Structure
+
+```text
+DAY_21/
+│
+├── data.json
+└── python.py
+```
+
+### `data.json`
+
+The JSON file stores candidate information such as:
+
+* Name
+* Class
+* Roll Number
+* Subject
+* CGPA Status
+
+### `python.py`
+
+The Python script reads the JSON file and allows the user to search for a candidate by name.
+
+---
+
+## ⚙️ How the Program Works
+
+```text
+data.json
+    ↓
+json.load()
+    ↓
+Python List of Dictionaries
+    ↓
+User enters candidate name
+    ↓
+Search candidate
+    ↓
+Display candidate information
+```
+
+The program uses `json.load()` to read the JSON file and convert the JSON data into Python objects.
+
+The search is made **case-insensitive** by using `.lower()`.
+
+---
+
+## 💻 Main Concepts Used
+
+### `json.load()`
+
+Used to read JSON data from a file.
+
+```python
+with open("data.json", "r") as file:
+    candidate = json.load(file)
+```
+
+### Searching
+
+The program compares the entered name with the candidate's name:
+
+```python
+if i["name"].lower() == search.lower():
+```
+
+### Key-Value Structure
+
+Each candidate is represented using key-value pairs:
+
+```text
+"name" → "Harsh"
+"class" → "CSE"
+"rollno" → 20
+"subject" → "COA"
+"cgpa_status" → "Pass"
+```
+
+---
+
+## 🖥️ Sample Output
+
+```text
+Enter the candidate name: Harsh
+
+Candidate Found!
+Name: Harsh
+Class: CSE
+Roll No: 20
+Subject: COA
+CGPA Status: Pass
+```
+
+If the candidate does not exist:
+
+```text
+Enter the candidate name: Rahul
+
+Candidate not found.
+```
+
+---
+
+## 🧠 What I Learned
+
+Through this task, I learned:
+
+* What JSON is.
+* Difference between JSON and a Python dictionary.
+* How to read JSON files using `json.load()`.
+* How JSON data becomes Python lists and dictionaries.
+* How to search structured data.
+* How to access dictionary values using keys.
+* Why `with open()` is useful for file handling.
+* How to perform case-insensitive searching.
+
+---
+
+## 🎤 Interview Questions & Answers
+
+### 1. What is JSON?
+
+**Answer:**
+
+> JSON stands for JavaScript Object Notation. It is a lightweight data format used to store and exchange structured data. It is commonly used for communication between frontend and backend applications.
+
+### 2. What is the difference between JSON and a Python dictionary?
+
+**Answer:**
+
+> A Python dictionary is a data structure used inside Python to store data in key-value pairs. JSON is a language-independent data format used to store and exchange structured data.
+
+### 3. How do you read JSON from a file in Python?
+
+**Answer:**
+
+> We use `json.load()` to read JSON data from a file. We open the file using `with open()` and then use `json.load(file)` to convert the JSON data into Python objects such as a list or dictionary.
+
+---
+
+## 🔑 Important Difference
+
+```text
+json.load()  → Read JSON from a file
+json.dump()  → Write JSON to a file
+```
+
+---
+
+## 👨‍💻 Internship Information
+
+**Internship:** Python Programming Internship
+**Organization:** Veda Technology
+**Task:** Day 21 — Create a JSON Data Processor
+**Language:** Python
+
+---
+
+## ✅ Conclusion
+
+The Day 21 project helped me understand how Python can process **structured JSON data**. I learned how to read JSON files, work with lists and dictionaries, search records, and display relevant information based on user input.
+# Day 21 — JSON Data Processor
+
+## 📌 Project Overview
+
+This project was completed as part of my **Python Programming Internship at Veda Technology**.
+
+The objective of this task was to learn how to work with **JSON data in Python**, including reading structured data, searching records, and displaying candidate information.
+
+---
+
+## 🎯 Objective
+
+* Understand JSON and its structure.
+* Learn how to read JSON data using Python.
+* Use the built-in `json` module.
+* Search for a particular candidate.
+* Work with lists and dictionaries.
+* Handle JSON file processing using Python.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **JSON**
+* **`json` module**
+
+---
+
+## 📂 Project Structure
+
+```text
+DAY_21/
+│
+├── data.json
+└── python.py
+```
+
+### `data.json`
+
+The JSON file stores candidate information such as:
+
+* Name
+* Class
+* Roll Number
+* Subject
+* CGPA Status
+
+### `python.py`
+
+The Python script reads the JSON file and allows the user to search for a candidate by name.
+
+---
+
+## ⚙️ How the Program Works
+
+```text
+data.json
+    ↓
+json.load()
+    ↓
+Python List of Dictionaries
+    ↓
+User enters candidate name
+    ↓
+Search candidate
+    ↓
+Display candidate information
+```
+
+The program uses `json.load()` to read the JSON file and convert the JSON data into Python objects.
+
+The search is made **case-insensitive** by using `.lower()`.
+
+---
+
+## 💻 Main Concepts Used
+
+### `json.load()`
+
+Used to read JSON data from a file.
+
+```python
+with open("data.json", "r") as file:
+    candidate = json.load(file)
+```
+
+### Searching
+
+The program compares the entered name with the candidate's name:
+
+```python
+if i["name"].lower() == search.lower():
+```
+
+### Key-Value Structure
+
+Each candidate is represented using key-value pairs:
+
+```text
+"name" → "Harsh"
+"class" → "CSE"
+"rollno" → 20
+"subject" → "COA"
+"cgpa_status" → "Pass"
+```
+
+---
+
+## 🖥️ Sample Output
+
+```text
+Enter the candidate name: Harsh
+
+Candidate Found!
+Name: Harsh
+Class: CSE
+Roll No: 20
+Subject: COA
+CGPA Status: Pass
+```
+
+If the candidate does not exist:
+
+```text
+Enter the candidate name: Rahul
+
+Candidate not found.
+```
+
+---
+
+## 🧠 What I Learned
+
+Through this task, I learned:
+
+* What JSON is.
+* Difference between JSON and a Python dictionary.
+* How to read JSON files using `json.load()`.
+* How JSON data becomes Python lists and dictionaries.
+* How to search structured data.
+* How to access dictionary values using keys.
+* Why `with open()` is useful for file handling.
+* How to perform case-insensitive searching.
+
+---
+
+## 🎤 Interview Questions & Answers
+
+### 1. What is JSON?
+
+**Answer:**
+
+> JSON stands for JavaScript Object Notation. It is a lightweight data format used to store and exchange structured data. It is commonly used for communication between frontend and backend applications.
+
+### 2. What is the difference between JSON and a Python dictionary?
+
+**Answer:**
+
+> A Python dictionary is a data structure used inside Python to store data in key-value pairs. JSON is a language-independent data format used to store and exchange structured data.
+
+### 3. How do you read JSON from a file in Python?
+
+**Answer:**
+
+> We use `json.load()` to read JSON data from a file. We open the file using `with open()` and then use `json.load(file)` to convert the JSON data into Python objects such as a list or dictionary.
+
+---
+
+## 🔑 Important Difference
+
+```text
+json.load()  → Read JSON from a file
+json.dump()  → Write JSON to a file
+```
+
+---
+
+## 👨‍💻 Internship Information
+
+**Internship:** Python Programming Internship
+**Organization:** Veda Technology
+**Task:** Day 21 — Create a JSON Data Processor
+**Language:** Python
+
+---
+
+## ✅ Conclusion
+
+The Day 21 project helped me understand how Python can process **structured JSON data**. I learned how to read JSON files, work with lists and dictionaries, search records, and display relevant information based on user input.
+![alt text](<Screenshot 2026-09-13 195910.png>)
