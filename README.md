@@ -1831,4 +1831,252 @@ json.dump()  → Write JSON to a file
 ## ✅ Conclusion
 
 The Day 21 project helped me understand how Python can process **structured JSON data**. I learned how to read JSON files, work with lists and dictionaries, search records, and display relevant information based on user input.
-![alt text](<Screenshot 2026-09-13 195910.png>)
+![alt text](<image.png>)
+
+
+# Day 22 – File Organizer
+
+## 📌 Project Overview
+
+This project is a Python-based **File Organizer** that automatically scans a folder and organizes files into different folders according to their file extensions.
+
+The main purpose of this project is to learn **filesystem automation using Python**.
+
+---
+
+## 🎯 Objective
+
+* Learn how to work with files and folders using Python.
+* Understand `pathlib`.
+* Use `shutil` to move files.
+* Automatically organize files based on their extensions.
+* Handle duplicate filenames safely.
+* Practice filesystem automation.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* `pathlib`
+* `shutil`
+
+---
+
+## 📂 Project Structure
+
+```text
+day22/
+│
+├── program.py
+├── file.py
+├── image.jpg
+├── node.csv
+└── what.docx
+```
+
+The files are placed in the Day 22 folder for testing.
+
+---
+
+## ⚙️ How It Works
+
+The program follows these steps:
+
+1. Define the source directory using `Path(".")`.
+2. `Path(".")` represents the current working directory.
+3. Check whether the source directory exists.
+4. Scan the directory using `iterdir()`.
+5. Check whether each item is a file using `is_file()`.
+6. Get the file extension using `suffix`.
+7. Match the extension with a predefined category.
+8. Create the required destination folder.
+9. Check whether a file with the same name already exists.
+10. Move the file using `shutil.move()`.
+11. Display the result in the terminal.
+
+---
+
+## 🔑 Important Concepts
+
+### 1. pathlib
+
+`pathlib` is a Python module used for working with files and directories.
+
+Example:
+
+```python
+from pathlib import Path
+
+source_folder = Path(".")
+```
+
+The `.` represents the **current working directory**.
+
+---
+
+### 2. shutil
+
+`shutil` provides high-level operations for working with files and directories.
+
+In this project, it is used to move files:
+
+```python
+shutil.move(str(file), str(destination))
+```
+
+---
+
+### 3. File Extension
+
+The file extension is obtained using:
+
+```python
+extension = file.suffix.lower()
+```
+
+For example:
+
+```text
+image.jpg → .jpg
+node.csv → .csv
+what.docx → .docx
+```
+
+The extension is then used to determine the appropriate category.
+
+---
+
+### 4. Creating Folders
+
+The program creates a destination folder when required:
+
+```python
+destination_folder.mkdir(exist_ok=True)
+```
+
+`exist_ok=True` prevents an error if the folder already exists.
+
+---
+
+### 5. Duplicate File Handling
+
+Before moving a file, the program checks whether a file with the same name already exists:
+
+```python
+if destination.exists():
+    print(f"Skipped duplicate file: {file.name}")
+    continue
+```
+
+This prevents the existing file from being accidentally overwritten.
+
+---
+
+## 📊 Before and After
+
+### Before
+
+```text
+day22/
+├── program.py
+├── file.py
+├── image.jpg
+├── node.csv
+└── what.docx
+```
+
+### After
+
+Depending on the extension categories defined in the program, the files are automatically moved into folders such as:
+
+```text
+day22/
+├── program.py
+├── Python/
+│   └── file.py
+├── Images/
+│   └── image.jpg
+├── Data/
+│   └── node.csv
+└── Documents/
+    └── what.docx
+```
+
+---
+
+## 🧪 Testing
+
+A separate test folder or files created specifically for testing should be used whenever possible.
+
+Important files should **not** be used for testing because the program moves files automatically.
+
+---
+
+## 💡 Key Learning
+
+This project demonstrates how Python can automate repetitive file-management tasks.
+
+Instead of manually creating folders and moving every file, Python can:
+
+**Scan → Identify → Categorize → Create Folder → Move**
+
+---
+
+## 🎤 Interview Questions & Answers
+
+### Q1. What is pathlib?
+
+`pathlib` is a Python standard-library module that provides an object-oriented way to work with filesystem paths, files, and directories.
+
+---
+
+### Q2. What is the difference between os and shutil?
+
+`os` provides functions for interacting with the operating system, including working with directories, paths, and environment information.
+
+`shutil` provides higher-level operations for files and directories, such as copying and moving files.
+
+---
+
+### Q3. How can Python automate repetitive file-management tasks?
+
+Python can use modules such as `pathlib`, `os`, and `shutil` to automatically scan directories, identify files, create folders, copy or move files, and organize them according to rules.
+
+---
+
+### Q4. What does `Path(".")` mean?
+
+`Path(".")` represents the **current working directory** from which the Python program is being executed.
+
+---
+
+### Q5. What does `file.suffix` do?
+
+`file.suffix` returns the extension of a file.
+
+For example:
+
+```python
+Path("image.jpg").suffix
+```
+
+returns:
+
+```text
+.jpg
+```
+
+---
+
+### Q6. Why is `is_file()` used?
+
+`is_file()` checks whether a path represents a file. It helps prevent the program from trying to process directories as files.
+
+---
+
+## ✅ Conclusion
+
+Day 22 helped me understand **filesystem automation in Python**.
+
+I learned how to use `pathlib` to work with directories and file paths and `shutil` to move files automatically. This project shows how Python can reduce repetitive manual file-management work.
