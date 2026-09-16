@@ -1,67 +1,89 @@
 import json
 import random
 
-def load_questions():
-    with open("questions.json", "r") as file:
-        return json.load(file)
-    
-    def ask_questions(question_data, question_number):
-        print(f"\nQuestion{question_number}: {question_data['question']}")
-        
-        for option in question_data["options"]:
-            print(option)
-            
-        while True:
-            answer = input("Enter your answer(A/B/C/D): :").strip().upper()
-            
-            
-            if answer in ["A", "B", "C", "D"]:return answer
-            
-    print("Invalid answer. Please enter A, B, C, or D.")
-    
-    
-    def run_quiz():
-        questions = load_questions()
-        
-        random.shuffle(questions)
-        
-    score = 0
-    print("=" * 40)
-    print(" CLI QUIZ APPLICATION")
-    print("=" * 40)
-    
-    
-    for number, question in enumerate(questions, start=1):
-        user_answer = ask_question(question, number)
-        
-        if user_answer == question["answer"]:
-            print("correct! ")
-            score += 1
-            
+
+# Load questions from JSON file
+with open("questions.json", "r") as file:
+    questions = json.load(file)
+
+
+# Check if questions are available
+if not questions:
+    print("No questions found!")
+    exit()
+
+
+# Randomize question order
+random.shuffle(questions)
+
+
+score = 0
+total_questions = len(questions)
+
+
+# Quiz heading
+print("=" * 45)
+print("        CLI QUIZ APPLICATION")
+print("=" * 45)
+
+print(f"\nTotal Questions: {total_questions}")
+print("Enter A, B, C, or D to answer.\n")
+
+
+# Ask each question
+for number, question_data in enumerate(questions, start=1):
+
+    print(f"Question {number}: {question_data['question']}")
+
+    # Display options
+    for option in question_data["options"]:
+        print(option)
+
+    # Get valid answer
+    while True:
+        user_answer = input("Your answer: ").strip().upper()
+
+        if user_answer in ["A", "B", "C", "D"]:
+            break
         else:
-            print(f"wrong! correct answer: {question['answer']}")
-            
-            total = len(questions)
-            
-            percentage = (score / total) * 100
-            
-            
-            print( "\n" + "=" * 40)
-            print(" Final Result")
-            print("=" * 40)
-            print(f"score : : {score}/{total}")
-            print(f"Percentage: {Percentage:.2f}%")
-            
-            
-            if percentage >= 80:
-                print("Result : Excellent!")
-            elif percentage >= 50:
-                print("Result   :Good Effort!")
-                
-            else:
-                print("Result  :Keep Practicing!")
-                
-            print("=" * 40)
-            
-            if __name__ == "__main__":
-                run_quiz()
+            print("Invalid answer! Please enter A, B, C, or D.")
+
+    # Check the answer
+    if user_answer == question_data["answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! Correct answer: {question_data['answer']}")
+
+    print("-" * 45)
+
+
+# Calculate result
+wrong_answers = total_questions - score
+percentage = (score / total_questions) * 100
+
+
+# Display final result
+print("\n" + "=" * 45)
+print("             QUIZ RESULT")
+print("=" * 45)
+
+print(f"Total Questions : {total_questions}")
+print(f"Correct Answers : {score}")
+print(f"Wrong Answers   : {wrong_answers}")
+print(f"Score           : {score}/{total_questions}")
+print(f"Percentage      : {percentage:.2f}%")
+
+
+# Display performance message
+if percentage >= 80:
+    print("Result: Excellent!")
+elif percentage >= 60:
+    print("Result: Good Job!")
+elif percentage >= 40:
+    print("Result: Keep Practicing!")
+else:
+    print("Result: Need More Practice.")
+
+
+print("=" * 45)
