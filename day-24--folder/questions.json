@@ -1,55 +1,97 @@
 [
     {
-        "question": "what is the capital of India?",
-        "options": ["A.Mumbai", "B.Chennai", "C.Kolkata", "D.New Delhi"],
-        "answer": "New Delhi"
-
+        "question": "What is the capital of India?",
+        "options": ["A. Mumbai", "B. New Delhi", "C. Kolkata", "D. Chennai"],
+        "answer": "B"
     },
-    {
-        "question": "WHAT IS THE NAME OF VITAMIN FROM ORANGES?",
-        "options": ["A.A", "B.B", "C.C", "D.D"],
+        {
+        "question": "Who is known as the Father of the Indian Constitution?",
+        "options": [
+            "A. Mahatma Gandhi",
+            "B. Jawaharlal Nehru",
+            "C. Dr. B. R. Ambedkar",
+            "D. Sardar Patel"
+        ],
         "answer": "C"
     },
     {
-        "question": "what is the capital of Sri Lanka?",
-        "options": ["A.Sri Jayawardena Kotte", "B.Colombo", "C.Dambulla", "D.Jaffna"],
-        "answer": "A"
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+            "A. Earth",
+            "B. Venus",
+            "C. Mars",
+            "D. Jupiter"
+        ],
+        "answer": "C"
     },
     {
-    "question": "Who is known as the Father of the Indian Constitution?",
-    "options": ["A. Mahatma Gandhi", "B. Jawaharlal Nehru", "C. Dr. B. R. Ambedkar", "D. Sardar Patel"],
-    "answer": "C"
-},
-{
-    "question": "Which planet is known as the Red Planet?",
-    "options": ["A. Venus", "B. Jupiter", "C. Mars", "D. Saturn"],
-    "answer": "C"
-},
-{
-    "question": "Which is the largest ocean in the world?",
-    "options": ["A. Atlantic Ocean", "B. Indian Ocean", "C. Arctic Ocean", "D. Pacific Ocean"],
-    "answer": "D"
-},
-{
-    "question": "How many continents are there in the world?",
-    "options": ["A. Five", "B. Six", "C. Seven", "D. Eight"],
-    "answer": "C"
-},
-{
-    "question": "Which is the national animal of India?",
-    "options": ["A. Lion", "B. Tiger", "C. Elephant", "D. Leopard"],
-    "answer": "B"
-},
-{
-    "question": "Which is the longest river in India?",
-    "options": ["A. Yamuna", "B. Godavari", "C. Ganga", "D. Narmada"],
-    "answer": "C"
-},
-{
-    
-    "question": "Which is the largest state in India by area?",
-    "options": ["A. Uttar Pradesh", "B. Rajasthan", "C. Madhya Pradesh", "D. Maharashtra"],
-    "answer": "B"
-}
-
+        "question": "Which is the largest ocean in the world?",
+        "options": [
+            "A. Atlantic Ocean",
+            "B. Indian Ocean",
+            "C. Arctic Ocean",
+            "D. Pacific Ocean"
+        ],
+        "answer": "D"
+    },
+    {
+        "question": "How many continents are there in the world?",
+        "options": [
+            "A. Five",
+            "B. Six",
+            "C. Seven",
+            "D. Eight"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "What is the national animal of India?",
+        "options": [
+            "A. Lion",
+            "B. Tiger",
+            "C. Elephant",
+            "D. Leopard"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "Which is the longest river in India?",
+        "options": [
+            "A. Yamuna",
+            "B. Godavari",
+            "C. Ganga",
+            "D. Narmada"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "Which is the largest Indian state by area?",
+        "options": [
+            "A. Madhya Pradesh",
+            "B. Rajasthan",
+            "C. Maharashtra",
+            "D. Uttar Pradesh"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "Which gas is most abundant in Earth's atmosphere?",
+        "options": [
+            "A. Oxygen",
+            "B. Carbon Dioxide",
+            "C. Nitrogen",
+            "D. Hydrogen"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "Who wrote the Indian national anthem?",
+        "options": [
+            "A. Rabindranath Tagore",
+            "B. Bankim Chandra Chatterjee",
+            "C. Sarojini Naidu",
+            "D. Subhash Chandra Bose"
+        ],
+        "answer": "A"
+    }
 ]
