@@ -2080,3 +2080,294 @@ returns:
 Day 22 helped me understand **filesystem automation in Python**.
 
 I learned how to use `pathlib` to work with directories and file paths and `shutil` to move files automatically. This project shows how Python can reduce repetitive manual file-management work.
+
+
+# Day 24 – CLI Quiz Application
+
+## 📌 Project Overview
+
+The **CLI Quiz Application** is a command-line based quiz program developed using Python.
+
+The application loads quiz questions from a separate JSON file, displays questions and multiple-choice options, accepts answers from the user, validates the input, calculates the score, and displays the final result.
+
+This project was developed as part of my **Python Programming Internship at Veda Technology**.
+
+---
+
+## 🎯 Objective
+
+The main objectives of this project are:
+
+* Practice Python dictionaries and lists
+* Work with JSON data
+* Use loops and functions/application flow
+* Read data from an external JSON file
+* Handle user input
+* Validate user answers
+* Calculate scores and percentages
+* Randomize question order
+* Display a final quiz summary
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **JSON**
+* **Command Line / Terminal**
+* **VS Code**
+
+### Python Modules Used
+
+```python
+json
+random
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+day-24--folder/
+│
+├── quiz_application.py
+├── questions.json
+└── README.md
+```
+
+### File Description
+
+| File                  | Purpose                                                 |
+| --------------------- | ------------------------------------------------------- |
+| `quiz_application.py` | Contains the main quiz application logic                |
+| `questions.json`      | Stores the quiz questions, options, and correct answers |
+| `README.md`           | Contains project documentation                          |
+
+---
+
+## 📄 JSON Data Structure
+
+The questions are stored separately in `questions.json`.
+
+Example:
+
+```json
+{
+    "question": "What is the capital of India?",
+    "options": [
+        "A. Mumbai",
+        "B. New Delhi",
+        "C. Kolkata",
+        "D. Chennai"
+    ],
+    "answer": "B"
+}
+```
+
+The JSON file contains **10 questions**.
+
+Separating the questions from the Python program makes the application easier to maintain and update.
+
+---
+
+## ⚙️ How the Application Works
+
+### 1. Import Modules
+
+The program imports the `json` and `random` modules.
+
+```python
+import json
+import random
+```
+
+### 2. Load Questions
+
+The program opens the JSON file and loads the data.
+
+```python
+with open("questions.json", "r") as file:
+    questions = json.load(file)
+```
+
+The JSON data is converted into Python lists and dictionaries.
+
+### 3. Randomize Questions
+
+The question order is randomized using:
+
+```python
+random.shuffle(questions)
+```
+
+This makes the quiz different each time it runs.
+
+### 4. Display Questions
+
+The program loops through the questions:
+
+```python
+for number, question_data in enumerate(questions, start=1):
+```
+
+## 🖥️ Output
+
+The following screenshot shows the CLI Quiz Application running successfully:
+
+![Quiz Application Output](quiz.png)
+
+
+Copy this entire block into your `README.md`:
+
+````markdown
+# Day 25 - Python Utility Module
+
+## Project Overview
+
+This project demonstrates how to create a reusable Python utility module containing commonly used functions for validation, formatting, calculations, and file utilities.
+
+The main objective is to understand **modular programming and code reusability**.
+
+## Project Structure
+
+```text
+day-25-folder/
+│
+├── utility.py
+├── example.py
+└── README.md
+````
+
+## Files Description
+
+### utility.py
+
+This is the reusable Python module. It contains functions for:
+
+* Email validation
+* Number validation
+* Name formatting
+* Currency formatting
+* Average calculation
+* Percentage calculation
+* File existence checking
+* Line counting
+
+### example.py
+
+This program imports functions from `utility.py` and demonstrates how they can be reused in another Python program.
+
+## Functions
+
+### 1. is_valid_email(email)
+
+Checks whether an email contains basic valid characters such as `@` and `.`.
+
+### 2. is_valid_number(value)
+
+Checks whether a given value can be converted into a number.
+
+### 3. format_name(name)
+
+Removes unnecessary spaces and formats the name using title case.
+
+### 4. format_currency(amount)
+
+Formats a number as Indian currency with two decimal places.
+
+### 5. calculate_average(numbers)
+
+Calculates the average of a list of numbers.
+
+### 6. calculate_percentage(obtained, total)
+
+Calculates the percentage using obtained marks and total marks.
+
+### 7. file_exists(filename)
+
+Checks whether a specified file exists.
+
+### 8. count_lines(filename)
+
+Counts the number of lines in a text file.
+
+## How to Run
+
+Open the terminal inside the project folder and run:
+
+```bash
+python example.py
+```
+
+## Example Import
+
+A function from the utility module can be imported into another Python program:
+
+```python
+from utility import calculate_average
+
+marks = [80, 90, 70]
+
+average = calculate_average(marks)
+
+print(average)
+```
+
+## Concepts Learned
+
+* Python Modules
+* Python Packages
+* Importing Functions
+* Code Reusability
+* Modular Programming
+* Functions
+* File Handling
+* Exception Handling
+* Documentation
+* Single Responsibility Principle
+
+# Interview Questions and Answers
+
+## 1. What is the difference between a module and a package?
+
+**Answer:**
+
+A module consists of a single Python file, whereas a package consists of many modules.
+
+## 2. Why is code reusability important?
+
+**Answer:**
+
+Code reusability is important because it reduces redundancy and saves time. It also helps reduce unnecessary repeated work in a project.
+
+## 3. Name two kinds of things you can put inside a utility module.
+
+**Answer:**
+
+We can put reusable functions such as validation functions, formatting functions, calculation functions, and file utility functions inside a utility module.
+
+For example:
+
+* Validation functions
+* Calculation functions
+
+## Conclusion
+
+This project demonstrates how reusable functions can be organized inside a Python module and imported into another program.
+
+It provides practical experience with **modular programming, code reuse, functions, and file utilities**.
+
+## Day 25 Status
+
+**Core Task:** Completed
+**Utility Module:** Completed
+**Example Program:** Completed
+**Interview:** Completed
+**Documentation:** Completed
+
+```
+```
+## Output
+
+![Program Output](image.png)
