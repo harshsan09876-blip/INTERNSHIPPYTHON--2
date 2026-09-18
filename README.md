@@ -2371,3 +2371,133 @@ It provides practical experience with **modular programming, code reuse, functio
 ## Output
 
 ![Program Output](image.png)
+
+
+
+# Day 26 — Date & Time Utility
+
+## 📌 Project Overview
+
+This project is a **Date & Time Utility** built using Python's `datetime` module.
+
+The main purpose of this project is to learn practical date and time manipulation in Python.
+
+## 🎯 Objective
+
+* Understand the `datetime` module
+* Convert date strings into datetime objects
+* Calculate age
+* Calculate differences between dates
+* Work with formatted dates and times
+* Validate date input
+* Understand leap-year handling through the standard library
+
+## 🛠️ Technologies Used
+
+* Python
+* `datetime` module
+
+## ⚙️ Supported Operations
+
+The utility supports at least four operations:
+
+1. Calculate Age
+2. Calculate Days Between Dates
+3. Calculate Working Days
+4. Display Formatted Date & Time
+
+## 🧠 Concepts Learned
+
+### `datetime.strptime()`
+
+Used to convert a date string into a `datetime` object.
+
+```python
+date_of_birth = datetime.strptime(dob, "%d-%m-%Y")
+```
+
+### `datetime.now()`
+
+Used to get the current date and time.
+
+```python
+current_date = datetime.now()
+```
+
+### Date Difference
+
+Two datetime objects can be subtracted to calculate their difference.
+
+```python
+difference = date2 - date1
+```
+
+The result is a `timedelta` object.
+
+```python
+print(difference.days)
+```
+
+### `strftime()`
+
+Used to format a datetime object into a readable string.
+
+```python
+date_of_birth.strftime("%d-%m-%Y")
+```
+
+## 🎂 Sample Calculation — Age
+
+Example input:
+
+```text
+Enter the DOB in (DD-MM-YYYY): 23-09-2023
+```
+
+Example output:
+
+```text
+DATE OF BIRTH: 23-09-2023
+CURRENT DATE: 18-09-2026
+YOUR AGE: 2 years
+```
+
+## ⚠️ Input Validation
+
+The program uses `try-except` to handle invalid date formats.
+
+```python
+try:
+    date_of_birth = datetime.strptime(dob, "%d-%m-%Y")
+except ValueError:
+    print("Invalid date format!")
+```
+
+## 🎤 Interview Questions & Answers
+
+### 1. What is the datetime module?
+
+The `datetime` module is a standard Python module used to work with dates and times. It can be used to create, format, parse, and calculate dates and times.
+
+### 2. How do you calculate the difference between two dates?
+
+First, convert date strings into datetime objects using `datetime.strptime()`. Then subtract one date from the other. Python returns the result as a `timedelta` object, and `.days` can be used to get the difference in days.
+
+### 3. Why should date calculations use standard libraries?
+
+Standard libraries provide reliable and built-in functions for date and time calculations. They handle cases such as leap years and date differences better than manual calculations.
+
+## ▶️ How to Run
+
+Open the project folder in the terminal and run:
+
+```bash
+python date_time_utility.py
+```
+
+## ✅ Learning Outcome
+
+By completing this task, I learned how to use Python's `datetime` module for practical date and time operations instead of manually calculating dates.
+## 📸 Output
+
+![Date & Time Utility Output](output.png)
