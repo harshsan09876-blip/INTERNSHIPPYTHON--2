@@ -2501,3 +2501,232 @@ By completing this task, I learned how to use Python's `datetime` module for pra
 ## 📸 Output
 
 ![Date & Time Utility Output](output.png)
+
+
+Absolutely, Captain. 🫡🔥 Here is the **Day 27 `README.md`**, including the four interview questions and your corrected answers.
+
+````markdown
+# Day 27 - Build a Simple API Client
+
+## 📌 Project Overview
+
+This project demonstrates how to use Python to communicate with a public REST API, send HTTP requests, receive JSON responses, extract information, and handle errors.
+
+For practice, different HTTP methods were tested using JSONPlaceholder, including GET, POST, PUT, PATCH, and DELETE.
+
+---
+
+## 🎯 Objective
+
+- Understand the basics of REST APIs
+- Learn how HTTP requests work
+- Use Python's `requests` library
+- Work with JSON responses
+- Check HTTP status codes
+- Understand GET, POST, PUT, PATCH, and DELETE
+- Add basic error handling
+
+---
+
+## 🛠️ Tools Used
+
+- Python
+- Requests library
+- JSON
+- JSONPlaceholder Public REST API
+
+---
+
+## 🌐 HTTP Methods Practiced
+
+### GET
+Used to retrieve data from the server.
+
+### POST
+Used to send data to the server, usually to create a new resource.
+
+### PUT
+Used to completely update or replace an existing resource.
+
+### PATCH
+Used to partially update an existing resource.
+
+### DELETE
+Used to delete a resource.
+
+---
+
+## 🔄 How the API Client Works
+
+```text
+Python Program
+      ↓
+HTTP Request
+      ↓
+REST API Server
+      ↓
+HTTP Response
+      ↓
+Check Status Code
+      ↓
+Convert Response to JSON
+      ↓
+Extract Required Data
+      ↓
+Display Formatted Output
+````
+
+---
+
+## 📊 HTTP Status Code 200
+
+HTTP status code `200` means **OK**.
+
+It indicates that the request was successfully received and processed by the server.
+
+Example:
+
+```python
+print(response.status_code)
+```
+
+Output:
+
+```text
+200
+```
+
+---
+
+## 🐍 Python HTTP Requests
+
+Python can make HTTP requests using the `requests` library.
+
+Example:
+
+```python
+import requests
+
+response = requests.get(url)
+
+print(response.status_code)
+```
+
+The response can also be converted into JSON:
+
+```python
+data = response.json()
+print(data)
+```
+
+---
+
+## 🛡️ Error Handling
+
+The API client checks the response status and handles request-related errors.
+
+Example:
+
+```python
+try:
+    response = requests.get(url)
+    response.raise_for_status()
+
+except requests.exceptions.RequestException as error:
+    print("Request failed:", error)
+```
+
+This helps prevent the program from crashing when a connection or HTTP request fails.
+
+---
+
+# 🎤 Interview Questions & Answers
+
+## 1. What is a REST API?
+
+**Answer:**
+
+A REST API is an API that follows REST principles and allows different applications to communicate over HTTP. It commonly uses methods like GET, POST, PUT, PATCH, and DELETE to work with resources, usually using JSON for data.
+
+---
+
+## 2. What is HTTP status code 200?
+
+**Answer:**
+
+HTTP status code 200 means OK. It indicates that the request was successfully received and processed by the server.
+
+---
+
+## 3. What is the difference between GET and POST?
+
+**Answer:**
+
+GET is used to retrieve data from a server, while POST is used to send data to a server, usually to create a new resource.
+
+### Simple way to remember:
+
+```text
+GET  → Retrieve data
+POST → Create/send data
+```
+
+---
+
+## 4. How does Python make HTTP requests?
+
+**Answer:**
+
+Python can make HTTP requests using the `requests` library. For example, we can use `requests.get()` to send a GET request and receive the server's response.
+
+Example:
+
+```python
+import requests
+
+response = requests.get(url)
+print(response.status_code)
+```
+
+---
+
+## ▶️ How to Run
+
+1. Install the requests library:
+
+```bash
+pip install requests
+```
+
+2. Run the Python program:
+
+```bash
+python api_client.py
+```
+
+---
+
+## ✅ Result
+
+The project successfully demonstrated basic REST API consumption using Python.
+
+The GET, POST, PUT, PATCH, and DELETE HTTP methods were practiced using JSONPlaceholder, and JSON responses and HTTP status codes were handled successfully.
+
+---
+
+## 📚 Key Learning
+
+Through this project, I learned how Python communicates with REST APIs, how HTTP methods are used, how JSON responses are handled, and how status codes and request errors can be checked.
+
+---
+
+## 👨‍💻 Internship
+
+**Veda Technology - Python Programming Internship**
+
+**Day:** 27/45
+**Level:** 1
+**Task:** Build a Simple API Client
+
+```
+```
