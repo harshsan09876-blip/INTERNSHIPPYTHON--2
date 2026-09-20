@@ -2730,3 +2730,178 @@ Through this project, I learned how Python communicates with REST APIs, how HTTP
 
 ```
 ```
+
+# 🌦️ Weather Data CLI
+
+## 📌 Project Overview
+
+The **Weather Data CLI** is a command-line application developed in Python that retrieves real-time weather information for a user-provided city using a weather API.
+
+This project combines **API requests, JSON processing, functions, environment variables, and error handling** into a practical Python application.
+
+---
+
+## 🎯 Objective
+
+* Retrieve weather information using an API.
+* Accept a city name from the user.
+* Process the API response in JSON format.
+* Display useful weather information in a formatted CLI.
+* Handle invalid cities and API/network errors.
+* Keep API credentials outside the source code.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **Requests**
+* **Weather API**
+* **JSON**
+* **Environment Variables**
+
+---
+
+## ⚙️ Features
+
+* 🌍 Search weather by city name
+* 🌡️ Display temperature
+* 🤒 Display feels-like temperature
+* 💧 Display humidity
+* 🌤️ Display weather condition
+* 💨 Display wind speed
+* 🔐 API key stored outside the source code
+* ⚠️ Error handling for API and network problems
+
+---
+
+## 📂 Project Structure
+
+```text
+weather-data-cli/
+│
+├── weather_cli.py
+├── .env
+├── .gitignore
+└── README.md
+```
+
+> Keep `.env` out of GitHub because it contains the API credential.
+
+---
+
+## 🚀 How to Run
+
+### 1. Install the required library
+
+```bash
+pip install requests
+```
+
+### 2. Configure the API key
+
+Store your weather API key in an environment variable instead of directly writing it inside the Python source code.
+
+Example:
+
+```text
+OPENWEATHER_API_KEY=your_api_key
+```
+
+### 3. Run the application
+
+```bash
+python weather_cli.py
+```
+
+### 4. Enter a city
+
+```text
+Enter city name: Mathura
+```
+
+The application then retrieves and displays the weather information.
+
+---
+
+## 📊 Sample Output
+
+```text
+================================
+       WEATHER INFORMATION
+================================
+City        : Mathura
+Temperature : 31°C
+Feels Like  : 34°C
+Humidity    : 62%
+Weather     : Clear sky
+Wind Speed  : 3.2 m/s
+================================
+```
+
+---
+
+## ⚠️ Error Handling
+
+The application handles common problems such as:
+
+* Invalid city names
+* `404` — City/resource not found
+* `401` — Invalid API credentials
+* `429` — API rate limit exceeded
+* Network/connection errors
+* Other unexpected API errors
+
+---
+
+## 🧠 Concepts Learned
+
+Through this project, I practiced:
+
+1. Making HTTP API requests using `requests`
+2. Processing JSON responses
+3. Using Python functions
+4. Handling exceptions
+5. Working with HTTP status codes
+6. Using environment variables for credentials
+7. Formatting CLI output
+8. Building a practical API-based Python application
+
+---
+
+## 🎤 Interview Questions
+
+### 1. How do APIs authenticate requests?
+
+APIs commonly authenticate requests using methods such as **API keys, tokens, OAuth, or other authentication mechanisms**. In this project, an API key is used and stored outside the source code.
+
+### 2. What happens when an API returns a 404?
+
+A `404 Not Found` status means that the requested resource could not be found. In a weather application, this can happen when the provided city cannot be found by the API. The application should handle this response and show a user-friendly message.
+
+### 3. How would you handle API rate limits?
+
+I would detect the `429 Too Many Requests` response, avoid making unnecessary requests, and retry after an appropriate delay if the API provides a `Retry-After` value. I would also consider caching results and limiting unnecessary API calls.
+
+---
+
+## ✅ Deliverables Completed
+
+* [x] Working Weather CLI
+* [x] API Integration
+* [x] JSON Processing
+* [x] Formatted Weather Output
+* [x] Error Handling
+* [x] Secure API Credential Handling
+* [x] Interview Questions
+
+---
+
+## 👨‍💻 Author
+
+**Harsh Chauhan**
+
+B.Tech CSE (AIML)
+
+**Internship Project — Veda Technology**
+day - 28 is completed.
