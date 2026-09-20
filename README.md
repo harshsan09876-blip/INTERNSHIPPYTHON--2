@@ -2081,7 +2081,207 @@ Day 22 helped me understand **filesystem automation in Python**.
 
 I learned how to use `pathlib` to work with directories and file paths and `shutil` to move files automatically. This project shows how Python can reduce repetitive manual file-management work.
 
+# 🎟️ Expense Tracker
 
+## 📌 Project Overview
+
+**Expense Tracker** is a Python-based ticket billing application that calculates the total expense for people purchasing tickets from a ticket counter.
+
+The application provides different ticket categories — **Premium, Gold, and Silver** — and calculates the final payable amount based on:
+
+* Ticket category
+* Number of tickets
+* Ticket price
+* Applicable discount
+* Cold drink charges
+* Taxes
+
+The project demonstrates how Python can be used to build a simple real-world billing and expense calculation system.
+
+---
+
+## 🎯 Objectives
+
+The main objectives of this project are:
+
+* To calculate ticket expenses automatically.
+* To provide different ticket categories.
+* To apply discounts according to the ticket category or purchase.
+* To add additional charges such as cold drinks.
+* To calculate applicable taxes.
+* To generate the final payable amount.
+* To practice Python variables, conditions, functions, and arithmetic operations.
+
+---
+
+## 🎫 Ticket Categories
+
+The ticket counter provides three types of tickets:
+
+| Category    | Description                                   |
+| ----------- | --------------------------------------------- |
+| **Premium** | Highest-level ticket with premium pricing     |
+| **Gold**    | Mid-level ticket                              |
+| **Silver**  | Basic ticket with comparatively lower pricing |
+
+The user selects a ticket category and enters the required number of tickets.
+
+---
+
+## 💰 Expense Calculation
+
+The basic calculation flow is:
+
+```text
+Ticket Price
+     ↓
+Number of Tickets
+     ↓
+Subtotal
+     ↓
+Discount
+     ↓
+Cold Drink Charges
+     ↓
+Taxes
+     ↓
+Final Amount
+```
+
+### Formula
+
+```text
+Subtotal = Ticket Price × Number of Tickets
+
+Discounted Amount = Subtotal − Discount
+
+Amount with Extras = Discounted Amount + Cold Drink Charges
+
+Final Amount = Amount with Extras + Taxes
+```
+
+---
+
+## 🥤 Additional Charges
+
+Customers can also purchase cold drinks along with their tickets.
+
+The cold drink expense is added to the ticket expense before calculating the final bill.
+
+---
+
+## 🧾 Taxes
+
+Applicable taxes are calculated on the bill according to the logic implemented in the Python program.
+
+The tax amount is then added to the customer's total expense.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python 3**
+* Conditional Statements
+* Variables
+* Arithmetic Operators
+* Functions
+* User Input
+* Basic Billing Logic
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone or download the project
+
+Open the project folder in VS Code or any Python-supported IDE.
+
+### 2. Run the Python file
+
+```bash
+python expense_tracker.py
+```
+
+### 3. Enter the required details
+
+The program will ask for information such as:
+
+```text
+Ticket Category
+Number of Tickets
+Cold Drink Selection
+```
+
+The program then calculates the discount, additional charges, taxes, and final payable amount.
+
+---
+
+## 🧪 Example Workflow
+
+```text
+Customer
+   ↓
+Select Ticket Category
+   ↓
+Premium / Gold / Silver
+   ↓
+Enter Number of Tickets
+   ↓
+Calculate Ticket Cost
+   ↓
+Apply Discount
+   ↓
+Add Cold Drink Charges
+   ↓
+Calculate Taxes
+   ↓
+Display Final Expense
+```
+
+---
+
+## 📚 Concepts Practiced
+
+This project helped practice:
+
+1. **Variables** — storing ticket prices, quantities, discounts, and charges.
+2. **Input/Output** — taking customer information and displaying the bill.
+3. **Conditional Statements** — selecting the appropriate ticket category and charges.
+4. **Arithmetic Operations** — calculating totals, discounts, and taxes.
+5. **Functions** — organizing different parts of the billing logic.
+6. **Real-World Problem Solving** — converting a ticket-counter scenario into a Python program.
+
+---
+
+## 🚀 Future Improvements
+
+The project can be extended by adding:
+
+* Customer name and ID
+* Multiple customers in one session
+* Automatic receipt generation
+* File-based expense records
+* CSV/JSON storage
+* Daily and monthly expense reports
+* GUI interface
+* Database integration
+
+---
+
+## 👨‍💻 Project Type
+
+**Python Mini Project — Ticket Billing & Expense Tracking System**
+
+---
+
+## 🏁 Conclusion
+
+The **Expense Tracker** project demonstrates a simple real-world ticket billing system using Python.
+
+It combines ticket pricing, category selection, discounts, additional purchases, and taxes to calculate the **final amount payable by the customer**.
+
+This project provides practical experience in converting a real-world billing problem into structured Python logic.
+#####DAY -23 INTERNSHIP COMPLETED
 # Day 24 – CLI Quiz Application
 
 ## 📌 Project Overview
