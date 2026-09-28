@@ -1,0 +1,27 @@
+[
+    {
+        "name": "AI Development",
+        "category": "AI/ML",
+        "status": "Active"
+    },
+    {
+        "name": "Web Development",
+        "category": "Web",
+        "status": "Active"
+    },
+    {
+        "name": "Cloud Services",
+        "category": "Cloud",
+        "status": "Active"
+    },
+    {
+        "name": "Python Training",
+        "category": "Training",
+        "status": "Active"
+    },
+    {
+        "name": "CLOUD",
+        "category": "ACTIVE",
+        "status": "ACTIVE"
+    }
+]
