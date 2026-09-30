@@ -150,3 +150,67 @@ with open("programs.json", "w") as file:
     
     
     print("PROGRAM SAVED SUCESSFULLY")
+    
+   #day - 38
+   
+business = [
+       {
+           "name": "RAHUL SHARMA",
+           "email": "harshsan09876@gmail.com",
+           "service" : "WEB DEVELOPMENT",
+           "status" : "New"
+       },
+       
+       {
+           "name" : "RAVI BOPARA",
+           "email": "ravidotnet09@gmail.com",
+           "service": "AI DEVELOPMENT",
+           "status": "New"
+           
+       },
+       
+       {
+           "name" : "REENA MALHOTRA",
+           "email": "reenamal123@gmail.com",
+           "service": "CRICKET WITH AI",
+           "status": "New"
+       }
+       
+   ] 
+
+
+business_name = input("ENTER THE BUSINESS NAME: ")
+
+for i in business:
+    if i["name"] == business_name:
+        print(i["name"])
+        print(i["email"])
+        print(i["service"])
+        print(i["status"])
+        
+        
+new_business = [
+    {
+        "name" : "Aryan Verma",
+        "email" : "aryanver0987@gmail.com",
+        "service" : "CLOUD SERVICES",
+        "status" : "New"
+        
+    },
+    
+    
+    {
+        "name" : "KASHIF ALI",
+        "email": "kashali7863@gmail.com",
+        "service": "WEB DEPLOYMENT",
+        "status": "New"
+    },
+    {
+        "name" : "IMRAN KHAN",
+        "email": "khanran123@gmail.com",
+        "service": "WEB SERVICES",
+        "status": "New"
+    }
+]
+
+business.extend(new_business)
