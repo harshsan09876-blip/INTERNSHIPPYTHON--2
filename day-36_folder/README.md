@@ -326,3 +326,199 @@ Language: Python
 
 
 day - 38 --- > work.
+# 📅 Day 38 — Customer / Business Management
+
+Today, I extended the existing Business & Service Management System by adding **Customer/Business Management** to the workflow.
+
+The previous implementation already contained service and program management. Day 38 focuses on storing customer/business information and searching records through the terminal.
+
+---
+
+## 🎯 Today's Objective
+
+The objective of Day 38 was to:
+
+* Create business/customer records
+* Store multiple records using a list of dictionaries
+* Search records by name
+* Display customer/business details
+* Practice terminal-based Python execution
+* Continue extending the existing business workflow
+
+---
+
+## 👥 Customer / Business Data
+
+Each record contains:
+
+```text
+name
+email
+service
+status
+```
+
+Example:
+
+```python
+{
+    "name": "RAHUL SHARMA",
+    "email": "example@example.com",
+    "service": "WEB DEVELOPMENT",
+    "status": "New"
+}
+```
+
+Multiple records are stored inside a list:
+
+```python
+business = [
+    {
+        "name": "RAHUL SHARMA",
+        "email": "example@example.com",
+        "service": "WEB DEVELOPMENT",
+        "status": "New"
+    }
+]
+```
+
+---
+
+## 🔎 Business Search
+
+The application allows the user to search for a business/customer by name.
+
+The search uses a `for` loop and an `if` condition:
+
+```python
+business_name = input("ENTER THE BUSINESS NAME: ")
+
+for i in business:
+    if i["name"] == business_name:
+        print(i["name"])
+        print(i["email"])
+        print(i["service"])
+        print(i["status"])
+```
+
+This follows the same list-of-dictionaries approach used earlier for services and programs.
+
+---
+
+## ➕ Adding a New Business
+
+A new record can be created as a dictionary:
+
+```python
+new_business = {
+    "name": "TECHNOVISTA SOLUTIONS",
+    "email": "contact@example.com",
+    "service": "AI DEVELOPMENT",
+    "status": "New"
+}
+```
+
+It can then be added to the existing list using:
+
+```python
+business.append(new_business)
+```
+
+---
+
+## 💻 Terminal Execution
+
+The Python program was also tested through the VS Code terminal.
+
+The basic command used to run a Python file is:
+
+```bash
+python business.py
+```
+
+On Windows, the following command can also be used:
+
+```bash
+py business.py
+```
+
+---
+
+## 🔄 Updated Business Workflow
+
+The project workflow is now:
+
+```text
+Services
+    ↓
+Programs
+    ↓
+Customers / Business
+    ↓
+Search
+```
+
+The system will be extended further in the upcoming development stages.
+
+---
+
+## 🧠 Concepts Practiced Today
+
+* Lists
+* Dictionaries
+* List of dictionaries
+* `for` loops
+* `if` conditions
+* User input
+* Dictionary indexing
+* `append()`
+* Python terminal execution
+
+---
+
+## 🧪 Testing
+
+The customer/business search functionality was tested using synthetic records.
+
+Example:
+
+```text
+ENTER THE BUSINESS NAME: RAHUL SHARMA
+
+RAHUL SHARMA
+example@example.com
+WEB DEVELOPMENT
+New
+```
+
+The search successfully displayed the corresponding record.
+
+---
+
+## 🔐 Data Safety
+
+Only synthetic/example information should be used for testing this project. Private or production customer information is not required.
+
+---
+
+## 🚀 Next Development
+
+The next stage can extend the workflow with:
+
+* Customer inquiry management
+* Service requests
+* Status management
+* JSON storage for customer records
+* Search and filtering
+* Business reports
+
+These features are planned for future development and are not claimed as completed today.
+
+---
+
+## 📌 Day 38 Status
+
+**Status:** Customer/Business Management foundation completed.
+
+**Main Learning:** Using Python lists and dictionaries to represent and search structured business/customer records.
+![day-38](image_3.png)
