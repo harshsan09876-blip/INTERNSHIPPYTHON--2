@@ -1,0 +1,37 @@
+[
+    {
+        "name": "WEB DEVELOPMENT",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "PYTHON PROGRAMMING",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "CLOUD SERVICES",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "AIML PROGRAM",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "CYBER SECURITY WORKSHOP",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "DEVOPS PROGRAM",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    },
+    {
+        "name": "GENERATIVE AI WORKSHOP",
+        "category": "TRAINING",
+        "status": "ACTIVE"
+    }
+]

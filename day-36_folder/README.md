@@ -176,3 +176,153 @@ This project is being developed as part of the **Veda Technology Python Programm
 ![image_day_36](image.png)
 
 day 37 work . 
+)
+📅 Day 37 — Program Management
+
+
+
+Day 37 extends the existing business workflow by adding technology programs.
+
+Programs Included
+Web Development
+Python Programming
+Cloud Services
+AIML Program
+Cyber Security Workshop
+DevOps Program
+Generative AI Workshop
+
+Each program contains:
+
+name
+category
+status
+🔎 Program Search
+
+Users can search for a program by its name.
+
+Example:
+
+ENTER THE PROGRAM NAME: PYTHON PROGRAMMING
+
+PYTHON PROGRAMMING
+TRAINING
+ACTIVE
+➕ Adding Multiple Programs
+
+Multiple program records are stored inside a list:
+
+new_program = [
+    {...},
+    {...},
+    {...}
+]
+
+They are added to the main program list using:
+
+programs.extend(new_program)
+
+extend() is used because multiple dictionary records are being added to the existing list.
+
+💾 JSON Storage
+
+Program data is stored in:
+
+programs.json
+
+using:
+
+with open("programs.json", "w") as file:
+    json.dump(programs, file, indent=4)
+🔄 Current Business Workflow
+Student / User Data
+        ↓
+Services
+        ↓
+Programs
+        ↓
+JSON Storage
+
+The project will be extended further in the upcoming development stages.
+
+🧠 Python Concepts Practiced
+
+During Day 36–37, the following concepts were practiced:
+
+Lists
+Dictionaries
+List of dictionaries
+for loops
+if conditions
+User input
+Dictionary indexing
+append()
+extend()
+File handling
+JSON serialization
+json.dump()
+📂 Current Files
+project/
+│
+├── main Python file
+├── services.json
+├── programs.json
+└── README.md
+🧪 Testing
+
+The application was tested with:
+
+Student Search
+Enter student name: HARSH CHAUHAN
+
+HARSH CHAUHAN
+3rd
+8.09
+Service Search
+Enter service name: Cloud Services
+
+Cloud Services
+Cloud
+Active
+New Service
+AI DEVELOPMENT
+AIML
+ACTIVE
+Program Search
+ENTER THE PROGRAM NAME: PYTHON PROGRAMMING
+
+PYTHON PROGRAMMING
+TRAINING
+ACTIVE
+
+All tested operations executed successfully.
+
+🔐 Data Safety
+
+Only synthetic/example data is used in this project.
+
+No private production data from Veda Technology is used.
+
+🚀 Future Development
+
+The project will be extended with:
+
+Customer management
+Customer inquiries
+Service requests
+Search and filtering
+Business reports
+Better JSON data loading
+Modular Python files
+Complete workflow integration
+👨‍💻 Internship Project
+
+Organization: Veda Technology
+Internship: Python Programming Internship
+Development Stage: Day 36–37
+Language: Python
+
+![business_file](image_2.png)
+
+
+day - 38 --- > work.
